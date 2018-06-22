@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeActivity">
+
+
+    <Button
+        android:id="@+id/act_home_my_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我的账户" />
+
+    <Button
+        android:id="@+id/act_home_my_Adopt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="领养猫咪" />
+
+    <Button
+        android:id="@+id/act_home_my_cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我的猫咪" />
+    <Button
+        android:id="@+id/act_home_my_export"
+        android:text="导出私钥"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

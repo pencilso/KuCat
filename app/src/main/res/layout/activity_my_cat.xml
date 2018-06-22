@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.my.MyCatActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.jaredrummler.android.widget.AnimatedSvgView
+                android:id="@+id/act_my_cat_svgView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="25dp"
+                android:visibility="invisible"
+                app:animatedSvgFillStart="1200"
+                app:animatedSvgFillTime="1000"
+                app:animatedSvgImageSizeX="400"
+                app:animatedSvgImageSizeY="400"
+                app:animatedSvgTraceTime="2000"
+                app:animatedSvgTraceTimePerGlyph="1000" />
+
+            <TextView
+                android:id="@+id/act_my_cat_CatId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="它的Id:" />
+
+            <TextView
+                android:id="@+id/act_my_cat_birthTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="它的生日:" />
+
+            <TextView
+                android:id="@+id/act_my_cat_sireId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="它的爸爸:" />
+
+            <TextView
+                android:id="@+id/act_my_cat_matronId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="它的妈妈:" />
+
+            <TextView
+                android:id="@+id/act_my_cat_generation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="它是第:" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/act_my_cat_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_position="left"
+        fab:menu_labels_singleLine="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/act_my_cat_menu_mating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            fab:fab_label="交配"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/act_my_cat_menu_transfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            fab:fab_label="转让"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/act_my_cat_menu_nextCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            fab:fab_label="下一只"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/act_my_cat_menu_qrCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            fab:fab_label="二维码"
+            fab:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+</RelativeLayout>
