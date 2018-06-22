@@ -6,12 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-import org.web3j.crypto.Credentials;
-import org.web3j.crypto.ECKeyPair;
-import org.web3j.protocol.core.methods.response.Log;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
-
-import java.math.BigInteger;
 
 import butterknife.OnClick;
 import io.javac.blockcat.R;
@@ -22,6 +17,9 @@ import io.javac.blockcat.ui.my.MyCatActivity;
 import io.javac.blockcat.ui.qr.QrInfoActivity;
 import io.javac.blockcat.web3.EthApi;
 
+/**
+ * @author Pencilso
+ */
 @LayoutAnnotation(layoutId = R.layout.activity_home)
 public class HomeActivity extends BaseActivity {
 
@@ -34,7 +32,7 @@ public class HomeActivity extends BaseActivity {
         super.initData();
     }
 
-    @OnClick({R.id.act_home_my_cat, R.id.act_home_my_Adopt, R.id.act_home_my_account,R.id.act_home_my_export})
+    @OnClick({R.id.act_home_my_cat, R.id.act_home_my_Adopt, R.id.act_home_my_account, R.id.act_home_my_export})
     public void onClick(View view) {
         loading();
         switch (view.getId()) {

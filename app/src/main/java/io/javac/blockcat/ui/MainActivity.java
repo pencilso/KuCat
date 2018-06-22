@@ -28,6 +28,9 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.schedulers.Schedulers;
 
+/**
+ * @author Pencilso
+ */
 @RuntimePermissions
 @LayoutAnnotation(layoutId = R.layout.activity_main)
 public class MainActivity extends BaseActivity {

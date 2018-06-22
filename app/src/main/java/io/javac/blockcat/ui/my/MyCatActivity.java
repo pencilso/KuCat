@@ -3,7 +3,6 @@ package io.javac.blockcat.ui.my;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
@@ -11,7 +10,6 @@ import com.github.clans.fab.FloatingActionMenu;
 import com.jaredrummler.android.widget.AnimatedSvgView;
 
 import org.web3j.crypto.WalletUtils;
-import org.web3j.protocol.core.methods.response.Log;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
 
 import java.io.IOException;
@@ -19,7 +17,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.javac.blockcat.R;
 import io.javac.blockcat.annotation.LayoutAnnotation;
@@ -34,6 +31,9 @@ import io.javac.blockcat.ui.qr.QrInfoActivity;
 import io.javac.blockcat.web3.EthApi;
 import rx.Subscriber;
 
+/**
+ * @author Pencilso
+ */
 @LayoutAnnotation(layoutId = R.layout.activity_my_cat)
 public class MyCatActivity extends BaseActivity {
     @BindView(R.id.act_my_cat_svgView)
@@ -84,7 +84,7 @@ public class MyCatActivity extends BaseActivity {
                 dismissLoading();
                 toast("加载失败，请尝试重试！");
                 e.printStackTrace();
-                catId --;
+                catId--;
             }
 
             @SuppressLint("SetTextI18n")
@@ -100,7 +100,7 @@ public class MyCatActivity extends BaseActivity {
                 Calendar calendar = Calendar.getInstance();
                 calendar.setTime(new Date(catEntity.getBirthTime().longValue() * 1000));
                 StringBuffer sf = new StringBuffer();
-                sf.append(calendar.get(Calendar.YEAR)).append("-").append(calendar.get(Calendar.MONTH)+1).append("-").append(calendar.get(Calendar.DAY_OF_MONTH)).append(" ").append(calendar.get(Calendar.HOUR)).append(":").append(calendar.get(Calendar.MINUTE)).append(":").append(calendar.get(Calendar.SECOND));
+                sf.append(calendar.get(Calendar.YEAR)).append("-").append(calendar.get(Calendar.MONTH) + 1).append("-").append(calendar.get(Calendar.DAY_OF_MONTH)).append(" ").append(calendar.get(Calendar.HOUR)).append(":").append(calendar.get(Calendar.MINUTE)).append(":").append(calendar.get(Calendar.SECOND));
                 actMyCatBirthTime.setText("它的出生日期:" + sf.toString());
 
                 actMyCatSireId.setText("它的爸爸Id:" + catEntity.getSireId().longValue());
@@ -162,8 +162,7 @@ public class MyCatActivity extends BaseActivity {
     }
 
 
-
-    @OnClick({R.id.act_my_cat_menu_nextCat, R.id.act_my_cat_menu_transfer, R.id.act_my_cat_menu_qrCode,R.id.act_my_cat_menu_mating})
+    @OnClick({R.id.act_my_cat_menu_nextCat, R.id.act_my_cat_menu_transfer, R.id.act_my_cat_menu_qrCode, R.id.act_my_cat_menu_mating})
     public void onViewClicked(View view) {
         actMyCatMenu.close(true);
         switch (view.getId()) {
